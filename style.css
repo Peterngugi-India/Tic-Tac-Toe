@@ -4,4 +4,38 @@
     box-sizing: border-box;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    height: 100vh;
+}
 
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+.cell {
+    height: 100px;
+    width: 100px;
+    border: 1px solid rgba(0,0,0,1);
+}
+
+.winning-message {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(0,0,0,0.8);
+    display: none;
+}
+
+.winning-message button {
+    padding: 0.5em;
+    font-size: 1.5em;
+    font-weight: bold;
+}
