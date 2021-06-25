@@ -1,20 +1,31 @@
+//DOM MAPPING
 const board = document.querySelector('.container')
 const cells = document.querySelectorAll('.cell')
 
-const x = document.createElement('div');
-x.innerText = 'X'
+cells.forEach(cell => cell.addEventListener('click', playerMove))
 
-const o = document.createElement('div');
-o.innerText = 'O'
+//VARIABLES
 
+let xTurn
+
+
+//  Place X or O on board:
 
 function playerMove(e) {
-    let target = e.target;
-    target.appendChild(x)
+    let cell = e.target;
+
+    xTurn ? cell.setAttribute('class', 'cell x') : cell.setAttribute('class', 'cell circle')
+    
+    switchTurn()
+    // removes listener for a one-time click
+    cell.removeEventListener('click', playerMove)
+        // console.log('clicked')
 }
 
-cells.forEach(cell => cell.addEventListener('click', playerMove, false))
+// Determine whose turn it is & switch:
+function switchTurn() {
+    xTurn ? xTurn = false : xTurn = true
+}
+console.log(cells)
 
-
-
-console.log(cells);
+//Determine winner

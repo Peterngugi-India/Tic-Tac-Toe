@@ -21,9 +21,25 @@ body {
     height: 100px;
     width: 100px;
     border: 1px solid rgba(0,0,0,1);
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
+.x {
+    background-image: url('./img/X.png');
+    background-size: cover;
+}
+
+.circle {
+    background-image: url('./img/circle.png');
+    background-size: cover;
+}
 .winning-message {
+    display: none;
+}
+
+.show {
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -31,7 +47,6 @@ body {
     justify-content: center;
     align-content: center;
     background-color: rgba(0,0,0,0.8);
-    display: none;
 }
 
 .winning-message button {
