@@ -12,6 +12,11 @@ body {
     height: 100vh;
 }
 
+h1 {
+    padding: 0.5em 0;
+    font-size: 2.75em;
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(3, auto);
