@@ -20,10 +20,31 @@ body {
 .cell {
     height: 100px;
     width: 100px;
-    border: 1px solid rgba(0,0,0,1);
+    border: 1px solid rgba(63, 63, 63, 0.514);
     display: flex;
     justify-content: center;
     align-content: center;
+}
+
+/*removes border for top*/
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: none;
+}
+/*Removes border for sides*/
+
+.cell:nth-child(3n + 1) {
+    border-left: none;
+}
+.cell:nth-child(3n + 3) {
+    border-right: none;
+}
+/*Removes border from bottom*/
+.cell:last-child,
+.cell:nth-child(8),
+.cell:nth-child(7) {
+    border-bottom: none;
 }
 
 .x {
