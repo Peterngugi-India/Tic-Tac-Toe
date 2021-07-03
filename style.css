@@ -80,3 +80,9 @@ h1 {
     font-size: 1.5em;
     font-weight: bold;
 }
+
+.winning-message>h2 {
+    font-size: 5em;
+    color: white;
+    padding: 0.25em;
+}
